@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+
+    <style type="text/css">
+        .container
+        {
+            
+            margin-top: 100px;
+            padding-top: 40px;
+            background-color: #808B96;
+            color:white;
+            margin-right: 80px;
+            margin-left: 80px;
+            text-align:center;
+            height: 400px;
+
+           
+        }
+    </style>
+    <script type="text/javascript">
+    
+    function showPreview(event){
+    if(event.target.files.length > 0){
+    var src = URL.createObjectURL(event.target.files[0]);
+    var preview = document.getElementById("file-ip-1-preview");
+    preview.src = src;
+    preview.style.display = "block";
+    upoad.style.display = "block";
+  }
+}
+</script>
+    
+</head>
+<body>
+ <div class="container">
+    <div class="preview">
+        <label for="file-ip-1" >
+           <center> Select Image <br>
+            <img  src="i4.png"id="file-ip-1-preview" height="300px;" width="400px;"></center>
+        </label>
+    </div>
+     <form>
+    
+    <input type="file" id="file-ip-1" accept="image/*" onchange="showPreview(event);" hidden="">
+    <input type="submit" value="Upload image" style="background-color: black;color:white;">
+    </form>     
+
+    
+ </div>
+    
+</center>
+
+</body>
+
+</html>
